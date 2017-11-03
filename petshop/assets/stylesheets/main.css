@@ -241,6 +241,36 @@ nav ul ul ul {
   max-width: 100%;
   height: auto;
 }
+.info {
+  font-family: Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif;
+  font-size:12px;
+  padding-left: 50px;
+  color:white;
+  text-align:justify;
+  overflow: hidden;
+  background:  #339900;
+  background: linear-gradient(top,  #339900 20%,  #226600 80%);
+  background: -moz-linear-gradient(top,  #339900 20%,  #226600 80%);
+  background: -webkit-linear-gradient(top,  #339900 20%, #226600 80%);
+}
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.info h2 {
+  text-align: center;
+}
 /*
 .image:after, .image:before {
     opacity:0;
