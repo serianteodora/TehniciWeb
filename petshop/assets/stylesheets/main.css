@@ -225,6 +225,14 @@ nav ul ul ul {
     font-size:20px;
     text-align: center;
 }
+.sfaturi{
+    margin: 50px 0px;
+    padding-top:20px;
+    background:  #f2f2f2;
+    height:70px;
+    font-size:20px;
+    text-align: center;
+}
 #container {
   margin: 2em auto;
   display: flex;
@@ -241,6 +249,24 @@ nav ul ul ul {
   max-width: 100%;
   height: auto;
 }
+
+#containerSfaturi {
+  margin: 2em auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#containerSfaturi figure {
+  margin: 0px 40px;
+  max-width: 33%;
+}
+
+#containerSfaturi figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .info {
   font-family: Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif;
   font-size:12px;
@@ -254,6 +280,19 @@ nav ul ul ul {
   background: -webkit-linear-gradient(top,  #339900 20%, #226600 80%);
 }
 /* Create two equal columns that floats next to each other */
+.columnf {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    height: 180px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.rowf:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 .column {
     float: left;
     width: 50%;
@@ -267,10 +306,40 @@ nav ul ul ul {
     display: table;
     clear: both;
 }
-
 .info h2 {
   text-align: center;
 }
+.footer {
+  font-family: Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif;
+  font-size:12px;
+  padding-left: 50px;
+  color:white;
+  text-align:justify;
+  overflow: hidden;
+  background:  #339900;
+  background: linear-gradient(top,  #339900 20%,  #226600 80%);
+  background: -moz-linear-gradient(top,  #339900 20%,  #226600 80%);
+  background: -webkit-linear-gradient(top,  #339900 20%, #226600 80%);
+}
+.footer a:link {
+    color: white;
+}
+
+/* visited link */
+.footer a:visited {
+    color: #D3D3D3;
+}
+
+/* mouse over link */
+.footer a:hover {
+    color:  #FFFACD;
+}
+
+/* selected link */
+.footer a:active {
+    color: white;
+}
+
 /*
 .image:after, .image:before {
     opacity:0;
