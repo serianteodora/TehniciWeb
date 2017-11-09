@@ -1,39 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
   <head>
     <meta charset="utf-8">
     <title>PetShop</title>
     <link rel="stylesheet" href="assets/stylesheets/main.css">
     <link href='https://fonts.googleapis.com/css?family=Architects%20Daughter' rel='stylesheet'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
-       <span class="box">
-        <span class="container-1">
-         <span class="icon"><i class="fa fa-search"></i></span>
-        <input type="search" id="search" placeholder="Cauta in magazin..">
-        </span>
-      </span>
-  <ul class="topmenu">
-      <li><a href="#Logare">Logare</a></li>
-      <li><a href="#Blog">Blog</a></li>
-      <li><a href="#Contul%20meu">Contul meu</a></li>
-      <li><a href="#Acasa" >Acasa</a></li>
-  </ul>
+   <ul class="topmenu">
+      <li><i class="material-icons">info</i><a href="#Logare">Logare</a></li>
+      <li><i class="material-icons">receipt</i><a href="#Blog">Blog</a></li>
+      <li><i class="material-icons">person</i><a href="#Contul%20meu">Contul meu</a></li>
+      <li><i class="material-icons">home</i><a href="#Acasa" >Acasa</a></li>
+   </ul>
   <div class="header">
   <img src="images/blackhawk.jpg" alt = "logo" />
   </div>
   <nav>
-    <ul>
-        <li><a href="#">Caini</a>
+    <div id="menuToggle">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+    <ul id="menu">
+        <li><a href="#">Caini <i class="material-icons">keyboard_arrow_down</i></a>
             <ul>
-                <li><a href="#">Hrana</a>
+                <li><a href="#">Hrana <i class="material-icons">keyboard_arrow_right</i></a>
                   <ul>
                     <li><a href="#">Hrana uscata</a></li>
                     <li><a href="#">Hrana umeda</a></li>
                   </ul>
                 </li>
-                <li><a href="#">Ingrijire</a>
+                <li><a href="#">Ingrijire <i class="material-icons">keyboard_arrow_right</i></a>
                   <ul>
                       <li><a href="#">Deparazitare</a></li>
                       <li><a href="#">Sampoane</a></li>
@@ -44,15 +45,15 @@
                 <li><a href="#">Casti</a></li>
             </ul>
         </li>
-        <li><a href="#">Pisici</a>
+        <li><a href="#">Pisici <i class="material-icons">keyboard_arrow_down</i></a>
             <ul>
-                <li><a href="#">Hrana</a>
+                <li><a href="#">Hrana <i class="material-icons">keyboard_arrow_right</i></a>
                   <ul>
                     <li><a href="#">Hrana uscata</a></li>
                     <li><a href="#">Hrana umeda</a></li>
                   </ul>
                 </li>
-                <li><a href="#">Ingrijire</a>
+                <li><a href="#">Ingrijire <i class="material-icons">keyboard_arrow_right</i></a>
                   <ul>
                       <li><a href="#">Deparazitare</a></li>
                       <li><a href="#">Sampoane</a></li>
@@ -63,15 +64,15 @@
                 <li><a href="#">Casti</a></li>
             </ul>
         </li>
-        <li><a href="#">Pasari</a>
+        <li><a href="#">Pasari <i class="material-icons">keyboard_arrow_down</i></a>
             <ul>
-                <li><a href="#">Hrana</a>
+                <li><a href="#">Hrana <i class="material-icons">keyboard_arrow_right</i></a>
                   <ul>
                     <li><a href="#">Hrana uscata</a></li>
                     <li><a href="#">Hrana umeda</a></li>
                   </ul>
                 </li>
-                <li><a href="#">Ingrijire</a>
+                <li><a href="#">Ingrijire <i class="material-icons">keyboard_arrow_right</i></a>
                   <ul>
                       <li><a href="#">Deparazitare</a></li>
                       <li><a href="#">Sampoane</a></li>
@@ -82,15 +83,15 @@
                 <li><a href="#">Casti</a></li>
             </ul>
         </li>
-        <li><a href="#">Reptile</a>
+        <li><a href="#">Reptile <i class="material-icons">keyboard_arrow_down</i></a>
             <ul>
-                <li><a href="#">Hrana</a>
+                <li><a href="#">Hrana <i class="material-icons">keyboard_arrow_right</i></a>
                   <ul>
                     <li><a href="#">Hrana uscata</a></li>
                     <li><a href="#">Hrana umeda</a></li>
                   </ul>
                 </li>
-                <li><a href="#">Ingrijire</a>
+                <li><a href="#">Ingrijire <i class="material-icons">keyboard_arrow_right</i></a>
                   <ul>
                       <li><a href="#">Deparazitare</a></li>
                       <li><a href="#">Sampoane</a></li>
@@ -101,15 +102,15 @@
                 <li><a href="#">Casti</a></li>
             </ul>
         </li>
-    <li><a href="#">Pesti</a>
+    <li><a href="#">Pesti <i class="material-icons">keyboard_arrow_down</i></a>
         <ul>
-            <li><a href="#">Hrana</a>
+            <li><a href="#">Hrana <i class="material-icons">keyboard_arrow_right</i></a>
                 <ul>
                   <li><a href="#">Hrana uscata</a></li>
                   <li><a href="#">Hrana umeda</a></li>
                 </ul>
             </li>
-            <li><a href="#">Ingrijire</a>
+            <li><a href="#">Ingrijire <i class="material-icons">keyboard_arrow_right</i></a>
                 <ul>
                    <li><a href="#">Deparazitare</a></li>
                    <li><a href="#">Sampoane</a></li>
@@ -121,14 +122,15 @@
             </ul>
         </li>
     </ul>
-</nav>
-<section class="slideshow">
-  <div class="slideshow-container slide">
-    <img src="http://placeimg.com/625/225/any"/>
-    <img src="http://placeimg.com/625/225/animals"/>
-    <img src="http://placeimg.com/625/225/arch"/>
   </div>
-</section>
+</nav>
+<div class="slideshow">
+  <div class="slideshow-container slide">
+    <img src="http://placeimg.com/625/225/any" alt=""/>
+    <img src="http://placeimg.com/625/225/animals" alt=""/>
+    <img src="http://placeimg.com/625/225/arch" alt="" />
+  </div>
+</div>
 <article>
 <h1 class="titluProduse" >PROMOTII</h1>
 <div id = "container">
@@ -149,7 +151,7 @@
 </figure>
 </div>
 <h1 class="titluProduse" >NOUTATI</h1>
-<div id = "container">
+<div id = "container1">
 <figure>
 <img src="images/noutati/n1.jpg" alt="imagine">
 </figure>

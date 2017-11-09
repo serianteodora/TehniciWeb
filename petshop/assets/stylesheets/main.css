@@ -6,6 +6,7 @@ body {
     //background: #ffffb3;
 	background:white;
     max-width:1366px;
+   -webkit-animation:bugfix infinite 1s;
 }
 .header {
     font-family: 'Architects Daughter';
@@ -24,7 +25,7 @@ body {
   padding-left: 50px;
   padding-top: 10px;
   */
-  max-width:1349px;
+  width:1349px;
   height:300px;
 }
 .box{
@@ -50,6 +51,11 @@ body {
 }
 .topmenu li {
     float: right;
+}
+
+.topmenu .material-icons {
+  color:white;
+  padding:15px;
 }
 .topmenu li a {
     display: inline-block;
@@ -237,11 +243,14 @@ nav ul ul ul {
   margin: 2em auto;
   display: flex;
   flex-wrap: wrap;
+  text-align: center
 }
 
 #container figure {
   margin: 0;
   max-width: 33%;
+  cursor:pointer;
+  overflow:hidden;
 }
 
 #container figure img {
@@ -249,6 +258,47 @@ nav ul ul ul {
   max-width: 100%;
   height: auto;
 }
+
+#container figure img:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+#container1 {
+  margin: 2em auto;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center
+}
+
+#container1 figure {
+  margin: 0;
+  max-width: 33%;
+  cursor:pointer;
+  overflow:hidden;
+}
+
+#container1 figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#container1 figure img:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+/*
+#container .text {
+  position:relative;
+  bottom:30px;
+  left:0px;
+  visibility:hidden;
+}
+#container:hover .text{
+  visibility:visible;
+}*/
 
 #containerSfaturi {
   margin: 2em auto;
@@ -266,6 +316,11 @@ nav ul ul ul {
   max-width: 100%;
   height: auto;
 }
+#containerSfaturi figure img:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
 
 .info {
   font-family: Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif;
@@ -279,15 +334,12 @@ nav ul ul ul {
   background: -moz-linear-gradient(top,  #339900 20%,  #226600 80%);
   background: -webkit-linear-gradient(top,  #339900 20%, #226600 80%);
 }
-/* Create two equal columns that floats next to each other */
 .columnf {
     float: left;
     width: 30%;
     padding: 10px;
-    height: 180px; /* Should be removed. Only for demonstration */
 }
 
-/* Clear floats after the columns */
 .rowf:after {
     content: "";
     display: table;
@@ -297,10 +349,8 @@ nav ul ul ul {
     float: left;
     width: 50%;
     padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
 }
 
-/* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
@@ -339,32 +389,175 @@ nav ul ul ul {
 .footer a:active {
     color: white;
 }
-
-/*
-.image:after, .image:before {
-    opacity:0;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
+.left, .right {
+  float:left;
+  width:20%; /*The width is 20%, by default*/
 }
-.image:after {
-    content:'\A';
-    width:100%; height:100%;
-    top:0; left:0;
 
+.main {
+  float:left;
+  width:60%; /*The width is 60%, by default*/
 }
-.image:before {
-    content: attr(data-content);
+
+input {
+  display:none;
+}
+@media (max-width:1280px) {
+  .left, .main, .right , .slideshow, .header img{
     width:100%;
-    color:#fff;
-    z-index:1;
-    bottom:0;
-    padding:4px 10px;
-    text-align:center;
-    background:#339900;
-    box-sizing:border-box;
-    -moz-box-sizing:border-box;
+  }
 }
-.image:hover:after, .image:hover:before {
-    opacity:1;
+
+@media(max-width:360px){
+   .left, .main, .right{
+    width:30%;
+    }
+  .slideshow-container, .header img{
+   width:auto/4;
+   height:30%;
+  }
+   .slideshow{
+    height:auto/4;
+   }
+
+  body , .info , .footer {
+      font-size: 60%;
+      height:50%;
+   }
+   .titluProduse , .sfaturi {
+    font-size:13px;
+    height:30%;
+    padding-top:5px;
+   }
+
+   #menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
 }
-*/
+
+#menuToggle input
+{
+  display: block;
+  width: 20px;
+  height: 16px;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+  background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+  opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+#menu
+{
+  position: absolute;
+  width: 150px;
+  margin: -100px 0 0 -50px;
+  padding: 5px;
+  padding-top: 15px;
+  background:  #339900;
+  background: linear-gradient(top,  #339900 20%,  #226600 80%);
+  background: -moz-linear-gradient(top,  #339900 20%,  #226600 80%);
+  background: -webkit-linear-gradient(top,  #339900 20%, #226600 80%);
+  box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 5px 0;
+  font-size: 12px;
+  height:auto/4;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+   nav ul ul {
+      position: absolute; left: 100%; top:0;
+    }
+    nav ul ul li {
+      width:30%
+      height:auto/4;
+    }
+}
+
+@media(max-width:768px){
+  .left, .main, .right  {
+    width:50%;
+  }
+  .slideshow-container, .slideshow, .header img{
+   width:auto/2;
+   height:30%;
+  }
+  body , .info , .footer {
+      font-size: 80%;
+      height:50%;
+   }
+   .titluProduse  .sfaturi {
+    font-size:17px;
+    height:50%;
+    padding-top:10px;
+   }
+  .menu {
+    width:50%;
+  }
+  .menu li {
+   font-size:15px;
+ }
+}
